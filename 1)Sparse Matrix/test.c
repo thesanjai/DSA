@@ -1,22 +1,26 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-typedef struct points{
-    int x,y;
-}point;
-
-void create(point* p){
-    p->x=10;
-    p->y=20;
-}
-
-int main(int argc,char** argv){
-
-    printf("%ld\n",strlen("ip_matrix_A.txt"));
-     printf("%ld\n",sizeof("ip_matrix_A.txt"));
 
 
-     printf("%d %c",48,48);
+enum var{SUCCESS,SCANF_FALIURE};
 
+int main(){
+
+    char name[7];
+    printf("Enter the name: ");
+  if( scanf("%s",name)==0){
+
+    perror("Error in scanf");
+    
+    exit(257);
+  }
+
+   printf("name => %s\n",name);
+
+   printf("%d\n%d\n",SUCCESS,SCANF_FALIURE);
+
+    
+   
     return 0;
 }
